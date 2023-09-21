@@ -293,9 +293,16 @@
             async function removeElement() {
                 var iframe = document.getElementById("hs-form-iframe-0");
                 var element = iframe.contentDocument.getElementsByClassName("hubspot-link__container");
+                var form = document.getElementsByClassName("hs-form__virality-link")
+                
                 for (e of element) {
                     e.remove();
                 }  
+                
+                for (f of form) {
+                    f.remove();
+                }
+                
                 submit = iframe.contentDocument.getElementsByClassName("Actions")
                 submit[0].style.textAlign = 'center';
             }
